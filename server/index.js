@@ -7,6 +7,7 @@ app.use(cors());
 미들 웨어를 등록한다 */
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+app.use(express.static('public'))
 
 app.get('/', function (req, res) {
     res.sendfile(__dirname + "/public/home.html")
