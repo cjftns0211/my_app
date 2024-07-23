@@ -15,7 +15,16 @@ app.get('/', function (req, res) {
 app.get('/main', function (req, res) {
     res.sendfile(__dirname + "/public/main.html")
 });
-
+app.get('/chart', function(req, res)) {
+    res.json([
+        {
+        ranking: 1,
+        title: '데드풀과 울버린'
+        satisfy: 99,
+        ratio: 44.4
+        url: '/movie?cate=action&sf?code={ranking}'}
+    ])
+}
 // req: request [요청]
 // res: response [응답]
 
