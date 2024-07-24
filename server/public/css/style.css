@@ -41,12 +41,12 @@ a {
     display: flex;
 }
 
-.tabs h1, tabe h2 {
+.tabs h1, tabs h2 {
     font-size: 20px;
 }
 
 .tabs h2 {
-    color: lightblue;
+    color: lightgray;
 }
 
 .all {
@@ -55,3 +55,7 @@ a {
     padding: 5px 10px; 
 }
 
+.raking_header {
+    display: flex;
+    justify-content: space-between;
+}

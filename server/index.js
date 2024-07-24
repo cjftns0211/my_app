@@ -9,12 +9,35 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'))
 
+const users = [
+    {
+        idx: 1,
+        id: "test",
+        pw: "1234",
+        created: new Date("2024-07-20"),
+        email: "test@naver.com",
+        nick: "겁나 무서운 전사"
+    },
+    {
+        idx: 2,
+        id: "hello",
+        pw: "hello1234",
+        created: new Date("2024-07-22"),
+        email: "helloworld@naver.com",
+        nick: "헬로월드"
+    }
+];
+
 app.get('/', function (req, res) {
     res.sendfile(__dirname + "/public/home.html")
 });
 app.get('/main', function (req, res) {
     res.sendfile(__dirname + "/public/main.html")
 });
+app.post('/login', function(req, res) {
+    let {user_id, user_pw } = req.body;
+    console.log(user_id, user_pw);
+})
 app.get('/chart', function (req, res) {
     res.json([
         {
